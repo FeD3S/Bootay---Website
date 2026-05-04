@@ -1,0 +1,414 @@
+/* style.css */
+
+/* RESET GLOBALE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* =========================================
+   HEADER E MENU DI NAVIGAZIONE
+========================================= */
+.main-header {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none; 
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f39c12;
+}
+
+/* =========================================
+   HERO SECTION (HOME PAGE)
+========================================= */
+.hero-section {
+    background-image: url('ImmagineHome.JPG'); 
+    background-color: #888; 
+    background-size: cover;
+    background-position: center;
+    height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    padding: 0 20px;
+}
+
+/* =========================================
+   SEZIONI GENERICHE (HOME PAGE)
+========================================= */
+.location-section, .shop-info-section, .contact-form-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 10px; 
+}
+
+.location-section h2, .shop-info-section h2, .contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.location-section p, .shop-info-section p, .contact-form-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* STILE PULSANTI */
+.maps-btn, .buy-btn, .submit-btn {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.maps-btn:hover, .buy-btn:hover, .submit-btn:hover {
+    background-color: #f39c12;
+}
+
+/* =========================================
+   STILI PER I FORM DI CONTATTO E ORDINE
+========================================= */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+.contact-form .submit-btn {
+    display: block;
+    width: 100%; 
+    margin-top: 10px;
+}
+
+/* =========================================
+   STILI PER LA GRIGLIA DELLO SHOP
+========================================= */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px; 
+    margin: 40px auto 0; 
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease; 
+    text-align: left; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9; 
+}
+
+.product-title {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f39c12; 
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* =========================================
+   STILI PER LA PAGINA TEAM (NUOVI)
+========================================= */
+
+/* Layout per la sezione con immagine a sinistra e testo a destra (Flexbox) */
+.team-overview-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 10px;
+}
+
+.team-overview-container {
+    display: flex;
+    align-items: center; /* Allinea verticalmente immagine e testo al centro */
+    gap: 40px; /* Spazio vuoto tra l'immagine e il blocco di testo */
+    max-width: 1100px; /* Larghezza massima per evitare che si allarghi troppo su grandi schermi */
+    margin: 0 auto; /* Centra il contenitore nella pagina */
+}
+
+/* I due blocchi figli prendono ciascuno il 50% dello spazio disponibile equamente */
+.team-image-box, .team-text-box {
+    flex: 1;
+}
+
+/* Stile dell'immagine della squadra completa: occupa tutto il suo box, con bordi arrotondati e ombra */
+.full-team-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-text-box h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.team-text-box p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6; /* Aumenta l'interlinea per una lettura più confortevole */
+}
+
+/* Layout per la griglia contenente i singoli giocatori */
+.roster-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.roster-section h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.roster-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Griglia per le card dei giocatori, simile a quella dello shop ma leggermente più compatta */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Stile della card per il singolo membro della squadra */
+.player-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    text-align: center; /* Centra foto e testo all'interno della card */
+    transition: transform 0.3s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px); /* Si solleva al passaggio del mouse */
+}
+
+/* Immagine del giocatore. Mettendo aspect-ratio: 1/1 la forziamo a diventare quadrata. 
+   object-fit: cover taglia l'immagine per riempire il quadrato senza deformarla,
+   border-radius: 50% la trasforma in un cerchio perfetto */
+.player-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #f39c12; /* Bordo arancione decorativo intorno alla foto */
+}
+
+.player-name {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.player-role {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #f39c12; /* Evidenzia il ruolo con il colore di accento */
+    margin-bottom: 10px;
+}
+
+.player-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   MEDIA QUERY PER DISPOSITIVI MOBILI 
+========================================= */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        max-height: 0; 
+        overflow: hidden;
+        transition: max-height 0.3s ease-out; 
+    }
+
+    .main-nav ul {
+        flex-direction: column; 
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .main-nav ul li {
+        margin: 15px 0;
+    }
+
+    .menu-checkbox:checked ~ .main-nav {
+        max-height: 300px; 
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    /* Regola aggiuntiva per i dispositivi mobili:
+       Se lo schermo è piccolo, l'immagine e il testo della squadra vengono incolonnati
+       invece di stare affiancati */
+    .team-overview-container {
+        flex-direction: column;
+        text-align: center; /* Centra il testo quando è incolonnato sotto l'immagine */
+    }
+}

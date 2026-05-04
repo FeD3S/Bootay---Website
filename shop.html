@@ -1,0 +1,74 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootay FC | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER: Mantenuto identico per coerenza di navigazione -->
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="LOGO.png" alt="Logo Bootay FC" class="logo">
+            <h1 class="team-name">Bootay FC</h1>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEZIONE PRODOTTI: Contenitore principale per la vetrina dello shop -->
+        <section class="shop-grid-section" style="padding: 60px 20px; text-align: center;">
+            <h2>Shop Bootay FC</h2>
+            <p>Esplora il nostro merchandising ufficiale.</p>
+            
+            <!-- Griglia per disporre i prodotti -->
+            <div class="shop-grid">
+                
+                <!-- CARD PRODOTTO: Cappellino -->
+                <div class="product-card">
+                    <img src="cappellino.jpg" alt="Cappellino Bootay FC" class="product-img">
+                    <h3 class="product-title">Cappellino</h3>
+                    <p class="product-price">20,00 €</p>
+                    <p class="product-desc">cappellino ufficiale dei Bootay FC, disponibile in colorazione viola, nera o bianca</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- SEZIONE ORDINE: Modulo per l'acquisto tramite email -->
+        <section class="contact-form-section">
+            <h2>Come Acquistare</h2>
+            <p>Per acquistare i nostri articoli, compila il modulo sottostante indicando i prodotti e le taglie desiderate. Ti risponderemo il prima possibile con i dettagli per il pagamento e il ritiro!</p>
+            
+            <form action="mailto:federico.saporiti@bootayfc.it,jacopo.brama@bootayfc.it?subject=Richiesta Ordine Shop Bootay FC" method="post" enctype="text/plain" class="contact-form">
+                <div class="form-group">
+                    <label for="userEmail">La tua email:</label>
+                    <input type="email" id="userEmail" name="Email_Mittente" placeholder="mariorossi@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="userMessage">I prodotti che desideri:</label>
+                    <textarea id="userMessage" name="Ordine" rows="5" placeholder="Esempio: Vorrei ordinare 1 Cappellino di colore viola..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Invia Richiesta d'Acquisto</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Bootay FC. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
