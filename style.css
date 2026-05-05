@@ -241,10 +241,8 @@ body {
 }
 
 /* =========================================
-   STILI PER LA PAGINA TEAM (NUOVI)
+   STILI PER LA PAGINA TEAM
 ========================================= */
-
-/* Layout per la sezione con immagine a sinistra e testo a destra (Flexbox) */
 .team-overview-section {
     background-color: #fff;
     padding: 60px 20px;
@@ -253,18 +251,16 @@ body {
 
 .team-overview-container {
     display: flex;
-    align-items: center; /* Allinea verticalmente immagine e testo al centro */
-    gap: 40px; /* Spazio vuoto tra l'immagine e il blocco di testo */
-    max-width: 1100px; /* Larghezza massima per evitare che si allarghi troppo su grandi schermi */
-    margin: 0 auto; /* Centra il contenitore nella pagina */
+    align-items: center; 
+    gap: 40px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
 }
 
-/* I due blocchi figli prendono ciascuno il 50% dello spazio disponibile equamente */
 .team-image-box, .team-text-box {
     flex: 1;
 }
 
-/* Stile dell'immagine della squadra completa: occupa tutto il suo box, con bordi arrotondati e ombra */
 .full-team-img {
     width: 100%;
     height: auto;
@@ -281,10 +277,9 @@ body {
 .team-text-box p {
     font-size: 1.1rem;
     color: #444;
-    line-height: 1.6; /* Aumenta l'interlinea per una lettura più confortevole */
+    line-height: 1.6; 
 }
 
-/* Layout per la griglia contenente i singoli giocatori */
 .roster-section {
     padding: 60px 20px;
     text-align: center;
@@ -302,7 +297,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Griglia per le card dei giocatori, simile a quella dello shop ma leggermente più compatta */
 .roster-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -311,30 +305,26 @@ body {
     margin: 0 auto;
 }
 
-/* Stile della card per il singolo membro della squadra */
 .player-card {
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-    text-align: center; /* Centra foto e testo all'interno della card */
+    text-align: center; 
     transition: transform 0.3s;
 }
 
 .player-card:hover {
-    transform: translateY(-5px); /* Si solleva al passaggio del mouse */
+    transform: translateY(-5px); 
 }
 
-/* Immagine del giocatore. Mettendo aspect-ratio: 1/1 la forziamo a diventare quadrata. 
-   object-fit: cover taglia l'immagine per riempire il quadrato senza deformarla,
-   border-radius: 50% la trasforma in un cerchio perfetto */
 .player-img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
-    border: 3px solid #f39c12; /* Bordo arancione decorativo intorno alla foto */
+    border: 3px solid #f39c12; 
 }
 
 .player-name {
@@ -346,7 +336,7 @@ body {
 .player-role {
     font-size: 0.95rem;
     font-weight: bold;
-    color: #f39c12; /* Evidenzia il ruolo con il colore di accento */
+    color: #f39c12; 
     margin-bottom: 10px;
 }
 
@@ -354,6 +344,96 @@ body {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
+}
+
+/* =========================================
+   STILI PER LA NUOVA PAGINA PARTITE
+========================================= */
+
+/* Padding e allineamento per la sezione principale */
+.matches-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.matches-section h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.matches-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Griglia responsiva per disporre le partite su più colonne nei display larghi */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Stile del blocco cliccabile. Essendo un tag <a>, disattiviamo la sottolineatura */
+.match-card {
+    display: block;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+/* Hover: il riquadro sale leggermente e il bordo diventa arancione BootayFC */
+.match-card:hover {
+    transform: translateY(-5px);
+    border-color: #f39c12;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.match-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.match-teams {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.match-time {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Stile per replicare un finto bottone di Instagram per far capire all'utente che è cliccabile */
+.ig-link-text {
+    display: inline-block;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.match-card:hover .ig-link-text {
+    opacity: 0.8;
 }
 
 /* =========================================
@@ -404,11 +484,8 @@ footer {
         font-size: 2rem;
     }
 
-    /* Regola aggiuntiva per i dispositivi mobili:
-       Se lo schermo è piccolo, l'immagine e il testo della squadra vengono incolonnati
-       invece di stare affiancati */
     .team-overview-container {
         flex-direction: column;
-        text-align: center; /* Centra il testo quando è incolonnato sotto l'immagine */
+        text-align: center; 
     }
 }

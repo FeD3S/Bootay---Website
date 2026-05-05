@@ -1,0 +1,78 @@
+<!-- partite.html (NUOVO FILE CREATO DA ZERO) -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootay FC | Partite</title>
+    <!-- Usa lo stesso file CSS per mantenere l'aspetto grafico coerente -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER: Identico alle altre pagine -->
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="LOGO.png" alt="Logo Bootay FC" class="logo">
+            <h1 class="team-name">Bootay FC</h1>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="partite.html">Partite</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEZIONE PARTITE: Qui verranno inserite man mano tutte le sfide -->
+        <section class="matches-section">
+            <h2>Calendario Partite</h2>
+            <p class="matches-subtitle">Scopri i nostri prossimi impegni. Clicca su una partita per vedere i dettagli e gli aggiornamenti sul nostro profilo Instagram!</p>
+            
+            <!-- Griglia per disporre le card delle partite -->
+            <div class="matches-grid">
+                
+                <!-- 
+                    CARD PARTITA: Ogni partita è avvolta da un tag <a>.
+                    Sostituisci "https://www.instagram.com/tuo_profilo" con il link reale 
+                    della pagina Instagram della squadra o del post specifico. 
+                    Il target="_blank" fa aprire il link in una nuova scheda.
+                -->
+                <a href="https://www.instagram.com/bootayfc/" target="_blank" class="match-card">
+                    <!-- Data e Competizione -->
+                    <p class="match-date">Domenica 15 Maggio 2026 - Campionato</p>
+                    
+                    <!-- Le due squadre che si affrontano -->
+                    <h3 class="match-teams">Bootay FC vs Real Madrid</h3>
+                    
+                    <!-- Orario e luogo -->
+                    <p class="match-time">Ore 15:00 - Campo da calcio Nievo</p>
+                    
+                    <!-- Pulsante finto (puramente visivo) per richiamare l'azione di click -->
+                    <span class="ig-link-text">Vedi su Instagram</span>
+                </a>
+
+                <!-- Esempio di una seconda card partita -->
+                <a href="https://www.instagram.com/bootayfc/" target="_blank" class="match-card">
+                    <p class="match-date">Mercoledì 18 Maggio 2026 - Amichevole</p>
+                    <h3 class="match-teams">Barcellona vs Bootay FC</h3>
+                    <p class="match-time">Ore 20:30 - Campo da calcio Nievo</p>
+                    <span class="ig-link-text">Vedi su Instagram</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Bootay FC. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
