@@ -147,6 +147,70 @@ body {
     background-color: #f39c12;
 }
 
+/* * ==========================================
+ * INIZIO INSERIMENTO: STILI PER LA SEZIONE FILM (PRIME VIDEO)
+ * ==========================================
+ */
+.movie-info-section {
+    /* Centra orizzontalmente tutto il contenuto (h2, p, a) all'interno del riquadro */
+    text-align: center;         
+    /* Applica 50px di spazio all'interno sopra e sotto, e 20px ai lati, coerentemente con le altre sezioni */
+    padding: 50px 20px;         
+    /* Applica lo sfondo bianco, staccandolo dallo sfondo grigio di body (#f4f4f4) */
+    background-color: #ffffff;  
+    /* Aggiunge il margine inferiore per non far attaccare la sezione successiva (contatti) */
+    margin-bottom: 10px;        
+}
+
+.movie-info-section h2 {
+    /* Dimensione del titolo identica alle altre sezioni (.location-section h2) per uniformità */
+    font-size: 2rem;            
+    /* Distanza dal paragrafo sottostante */
+    margin-bottom: 15px;        
+    /* Colore scuro standard per i titoli */
+    color: #1a1a1a;             
+}
+
+.movie-info-section p {
+    /* Dimensione del testo descrittivo identica alle altre sezioni */
+    font-size: 1.1rem;          
+    /* Distanza tra il paragrafo e il pulsante Prime Video */
+    margin-bottom: 30px;        
+    /* Colore grigio testuale standard */
+    color: #666;                
+}
+
+.prime-btn {
+    /* Mantiene il comportamento in linea permettendo però di applicare il padding strutturale */
+    display: inline-block;      
+    /* Colore identificativo di Prime Video (Azzurro) per immediato riconoscimento visivo */
+    background-color: #00A8E1;  
+    /* Testo bianco per un elevato contrasto sul fondo azzurro */
+    color: #ffffff;             
+    /* Spazio interno al bottone per renderlo cliccabile (12px verticale, 24px orizzontale) */
+    padding: 12px 24px;         
+    /* Rimuove la sottolineatura di default del tag <a> */
+    text-decoration: none;      
+    /* Uniforma il raggio dei bordi a 5px per matchare .maps-btn, .buy-btn ecc. */
+    border-radius: 5px;         
+    /* Rende il testo del bottone evidente */
+    font-weight: bold;          
+    /* Assicura che la grandezza del testo nel bottone sia consistente (1rem) */
+    font-size: 1rem;            
+    /* Rimuove i bordi extra per renderlo piatto */
+    border: none;
+    /* Transizione animata fluida quando si passa col mouse sopra il bottone */
+    transition: background-color 0.3s ease; 
+}
+
+.prime-btn:hover {
+    /* Scurisce lo sfondo al passaggio del mouse per feedback interattivo visivo */
+    background-color: #007db8;  
+    /* Mantiene il testo bianco per leggibilità durante l'hover */
+    color: #ffffff;             
+}
+
+
 /* =========================================
    STILI PER I FORM DI CONTATTO E ORDINE
 ========================================= */
